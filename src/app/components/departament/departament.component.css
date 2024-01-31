@@ -1,0 +1,40 @@
+.container{
+    padding: 5rem;
+    box-sizing: border-box;
+}
+
+.title{
+    margin-bottom: 2rem;
+}
+
+.list{
+    width: 40rem;
+    height: 25rem;
+    background-color: rgb(243, 243, 243);
+
+    overflow-y: scroll;
+    margin-bottom: 2rem;
+
+    box-sizing: border-box;
+}
+
+
+.noColaborator{
+    width: 40rem;
+    height: 25rem;
+    background-color: rgb(243, 243, 243);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    box-sizing: border-box;
+    font-weight: bold;
+    color: gray;
+    font-size: 1.2rem;
+}
+
+.noColaborator img{
+    width: 2rem;
+}

@@ -1,0 +1,18 @@
+<div class="overlay">
+    <div class="form-container">
+            <span>Atualizar Departamento:</span>
+
+            <label >ID:</label>
+            <input [(ngModel)]="departament.id" type="number" name="id" value={{departament.id}} min="0" autocomplete="off">
+    
+            <label >Nome:</label>
+            <input [(ngModel)]="departament.name" type="text" name="name" value={{departament.name}} autocomplete="off">
+    
+            <label>Sigla:</label>
+            <input [(ngModel)]="departament.acronym" type="text" name="sigla" value={{departament.acronym}} autocomplete="off">
+            <div>
+                <button (click)="updateDepartament()" >Atualizar</button>
+                <button class="btnCancel" (click)="handleCancel()">Cancelar</button>
+            </div>
+        </div>
+    </div>

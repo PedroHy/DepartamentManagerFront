@@ -1,0 +1,11 @@
+<div class="container">
+    <img class="image" *ngIf="colaborator.picture!=''" src="{{colaborator.picture}}"> 
+    <span *ngIf="colaborator.picture==''" class="loader"></span>
+    <div class="infos">
+        <span>{{colaborator.rg}}</span>
+        <span>{{colaborator.name}}</span>
+    </div>
+    <button (click)="openUpdateForm()">Editar</button>
+
+    <span (click)="openDeleteModal()"  class="btnDelColaborator">Excluir colaborador</span>
+</div>

@@ -1,0 +1,25 @@
+<div class="header">
+    <h1>DepartamentManager</h1>
+    <div class="buttonsContainer">
+        <a href="/"><img src="../../../assets/update-alt-2-svgrepo-com.svg" alt="refresh button" class="refresh"></a>
+        <button (click)="openForm()">Adicionar departamento</button>
+    </div>
+</div>
+
+<div class="grid-container" *ngIf="departaments.length>0">
+    <div class="grid">
+        <app-departament-card *ngFor="let departament of departaments" 
+            id={{departament.id}} name={{departament.name}} acronym={{departament.acronym}} 
+            (showUpdateForm)="openUpdateForm($event)" (showDeleteModal)="openDeleteModal($event)"/>
+    </div>
+</div>
+
+<div *ngIf="departaments.length<1" class="noDepartament">
+    <img src="./../../../assets/directory-missing-1630-svgrepo-com.svg">
+    <span>Nenhum departamento</span>
+</div>
+
+<app-departament-form (error)="errorModal()" (hideForm)="openForm()" *ngIf="showForm"></app-departament-form>
+<app-update-form departamentId={{idSelected}} (hideForm)="openUpdateForm($event)" *ngIf="showUpdateForm"></app-update-form>
+<app-delete-modal departamentId={{idSelected}} (hideModal)="openDeleteModal($event)"  *ngIf="showDeleteModal"></app-delete-modal>
+<app-error-departament-modal *ngIf="showErrorModal" (hideForm)="errorModal()"></app-error-departament-modal>

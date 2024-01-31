@@ -1,0 +1,32 @@
+<div class="overlay">
+    <div *ngIf="isLoading">
+        <span class="loader"></span>
+    </div>
+    <div *ngIf="!isLoading" class="form-container">
+            <span>Adicionar colaborador:</span>
+            <div class="form">
+                <label class="picture" tabindex="0">
+                    <input class="img-input" type="file" accept="image/*" (change)="onFileChange($event)">
+                    <span class="img">
+                        <img *ngIf="imageSrc" class="image" src="{{imageSrc}}">
+                        <img *ngIf="!imageSrc" class="imageCam" src="../../../../../assets/camera-square-svgrepo-com.svg">
+                    </span>
+                </label>
+                <div class="inputs">
+                    <label >ID:</label>
+                    <input [(ngModel)]="colaborator.id" type="number" name="id" min="0" autocomplete="off">
+            
+                    <label>Rg:</label>
+                    <input [(ngModel)]="colaborator.rg" type="text" name="Rg" mask="000.000.000-00" autocomplete="off">
+                    
+                    <label >Nome:</label>
+                    <input [(ngModel)]="colaborator.name" type="text" name="name" autocomplete="off">
+                </div>
+            </div>
+    
+            <div class="buttons">
+                <button (click)="addColaborator()">Adicionar</button>
+                <button class="btnCancel" (click)="handleCancel()">Cancelar</button>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,47 @@
+.overlay{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.568);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    width: 25rem;
+    background-color: white;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+}
+
+.form-container span{
+    font-size: 18pt;
+    font-weight: bold;
+
+    margin: 1rem 0;
+}
+
+.form-container label{
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.form-container input{
+    font-size: 16pt;
+    border-radius: 5px;
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+
+.form-container button{
+    font-weight: bold;
+    margin: .5rem .5rem .5rem 0;
+}

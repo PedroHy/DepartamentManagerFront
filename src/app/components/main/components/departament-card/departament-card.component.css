@@ -1,0 +1,59 @@
+
+.departamentCard{
+    height: 12rem;
+    width: 18rem;
+
+    background-color: rgb(228, 228, 228);
+    border-radius: 10px;
+
+    padding: 1.5rem;
+    box-sizing: border-box;
+    position: relative;
+    margin: .5rem;
+
+    transition: 0.1s ease-in-out;
+}   
+
+.departamentName{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.departamentAcronym{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+
+    font-size: 4rem;
+    font-weight: bold;
+
+    color: rgba(31, 31, 31, 0.39);
+}
+
+.departamentCard:hover{
+    background-color: rgb(240, 239, 239);
+}
+
+
+
+.images{
+    position: absolute;
+    bottom: .8rem;
+    left: .8rem;
+    display: flex;
+    gap: .5rem;
+}
+
+.images img{
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+.images .edit{
+    width: 1.4rem;
+}
+
+.images img:hover{
+    transform: scale(1.1);
+}

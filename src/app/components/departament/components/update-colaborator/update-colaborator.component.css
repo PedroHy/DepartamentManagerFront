@@ -1,0 +1,130 @@
+.overlay{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.568);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    background-color: white;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem 3rem;
+}
+
+
+.form-container span{
+    font-size: 18pt;
+    font-weight: bold;
+
+    margin: 1rem 0;
+}
+
+
+.form{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.picture{
+    width: 12rem;
+    height: 12rem;
+    background-color: rgb(197, 197, 197);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 4px dashed #aaa;
+    cursor: pointer;
+
+    transition: .5s ease-in-out;
+}
+
+.picture:hover{
+    border: 4px dashed #aaa;
+    background-color: rgb(241, 241, 241);
+
+}
+
+.picture span{
+    font-size: 1rem;
+    color:#555555;
+    position: relative;
+}
+
+.image{
+    width: 12rem;
+    height: 12rem;
+
+    object-fit: cover;
+}
+
+.imageCam{
+    width: 3rem;
+    height: 3rem;
+
+    object-fit: cover;
+}
+
+.img-input{
+    display: none;
+}
+
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.form label{
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.form input{
+    font-size: 16pt;
+    border-radius: 5px;
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+
+.form button{
+    font-weight: bold;
+    margin: .5rem .5rem .5rem 0;
+}
+
+.buttons{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #538fff;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 

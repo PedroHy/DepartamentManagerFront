@@ -1,0 +1,26 @@
+<div *ngIf="departament">
+  <div class="container">
+    <h1 class="title">{{ departament.name }}</h1>
+    
+    <div *ngIf="colaborators.length>0" class="list">
+      <app-list-item (load)="loadColaborator($event)" *ngFor="let colaborator of colaborators" name="{{colaborator.name}}" id={{colaborator.id}} rg="{{colaborator.rg}}"></app-list-item>
+    </div>
+
+    <div *ngIf="colaborators.length<1" class="noColaborator">
+      <img src="../../../assets/user-question-alt-svgrepo-com (1).svg">
+      <span>Nenhum colaborador registrado</span>
+    </div>
+
+    <button (click)="showForm()">Adicionar colaborador</button>
+  </div>
+
+
+  <app-colaborator-modal *ngIf="idSelected != ''" [colaboratorId]="idSelected" (editForm)="showUpdateForm()" (deleteModal)="showDeleteModal()"></app-colaborator-modal>
+  <app-colaborator-form
+    [departamentId]="departament.id"
+    (hideForm)="showForm()"
+    *ngIf="canShow"
+  ></app-colaborator-form>
+  <app-update-colaborator [colaboratorId]="idSelected" *ngIf="updateForm" (hideForm)="showUpdateForm()"></app-update-colaborator>
+  <app-delete-colaborator [colaboratorId]="idSelected" *ngIf="deleteModal" (showModal)="showDeleteModal()"></app-delete-colaborator>
+</div>

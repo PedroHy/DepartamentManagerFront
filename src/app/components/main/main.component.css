@@ -1,0 +1,57 @@
+.header{
+    background-color: rgb(20, 20, 20);
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.header h1{
+    font-size: 24pt;
+}
+
+.buttonsContainer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.refresh{
+    width: 2rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.refresh:hover{
+    transform: scale(1.1);
+}
+
+.grid-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 19rem 19rem 19rem 19rem;
+}
+
+.noDepartament{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+
+    height: 35rem;
+    flex-direction: column;
+
+    color: gray;
+    font-weight: bold;
+}
+
+.noDepartament img{
+    width: 3rem;
+}

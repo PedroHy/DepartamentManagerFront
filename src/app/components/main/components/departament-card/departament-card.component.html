@@ -1,0 +1,11 @@
+<div class="departamentCard">
+    <a routerLink="/{{ id }}">
+        <span class="departamentName">{{ name }}</span>
+    </a>
+    <span class="departamentAcronym">{{ acronym }}</span>
+    <div class="images">
+        <img (click)="deleteDepartament()" src="../../../../../assets/trash-svgrepo-com.svg">
+        <img  (click)="editDepartament()" class="edit" src="../../../../../assets/edit-svgrepo-com.svg">
+    </div>
+
+</div>

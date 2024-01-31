@@ -1,0 +1,65 @@
+.container{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: black;
+    width: 30%;
+
+    padding: 1rem;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.5rem;
+}
+
+.image{
+    width: 12rem;
+    height: 12rem;
+
+    object-fit: cover;
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnDelColaborator{
+    color: rgb(255, 68, 68);
+
+    position: absolute;
+    bottom: 6rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btnDelColaborator:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #538fff;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
