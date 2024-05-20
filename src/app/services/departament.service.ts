@@ -8,16 +8,16 @@ import { Departament } from '../interfaces/Departament';
 })
 export class DepartamentService {
 
-  private url = "http://localhost:5044/api/Departament"
+  private url = "http://localhost:8080/api/departament"
   
   constructor(private _httpClient: HttpClient) { }
   
   getAll(): Observable<Departament[]>{
-    return this._httpClient.get<Departament[]>(this.url);
+    return this._httpClient.get<Departament[]>(`${this.url}/all`);
   }
   
   getItem(id: number): Observable<Departament>{
-    return this._httpClient.get<Departament>(`${this.url}/${id}`);
+    return this._httpClient.get<Departament>(`${this.url}?id=${id}`);
   }
 
   createDepartament(departament:Departament):Observable<any>{
@@ -25,11 +25,11 @@ export class DepartamentService {
   }
 
   updateDepartament(id:number, departament:Departament):Observable<any>{
-    return  this._httpClient.put<any>(`${this.url}/${id}`, departament);
+    return  this._httpClient.put<any>(`${this.url}?id=${id}`, departament);
   }
 
   deleteDepartament(id:number):Observable<any>{
-    return this._httpClient.delete<any>(`${this.url}/${id}`);
+    return this._httpClient.delete<any>(`${this.url}?id=${id}`);
   }
 
 

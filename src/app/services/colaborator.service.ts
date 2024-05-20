@@ -8,7 +8,7 @@ import { Colaborator } from '../interfaces/Colabortor';
 })
 export class ColaboratorService {
 
-  private url = "http://localhost:5044/api/Colaborator"
+  private url = "http://localhost:8080/api/colaborator"
 
   constructor(private _httpClient: HttpClient) { }
 
@@ -17,11 +17,11 @@ export class ColaboratorService {
   }
 
   getbyDepartament(departamentId: number): Observable<Colaborator[]>{
-    return this._httpClient.get<Colaborator[]>(`${this.url}/departament/${departamentId}`);
+    return this._httpClient.get<Colaborator[]>(`${this.url}/departament?departamentId=${departamentId}`);
   }
   
   getOne(id: number): Observable<Colaborator>{
-    return this._httpClient.get<Colaborator>(`${this.url}/${id}`);
+    return this._httpClient.get<Colaborator>(`${this.url}?id=${id}`);
   }
 
   createCollaborator(colaborator: Colaborator): Observable<any>{
@@ -29,11 +29,11 @@ export class ColaboratorService {
   }
 
   updateCollaborator(id:number, colaborator: Colaborator): Observable<any>{
-    return  this._httpClient.put<any>(`${this.url}/${id}`, colaborator);
+    return  this._httpClient.put<any>(`${this.url}?id=${id}`, colaborator);
   }
 
   deleteCollaborator(id:number): Observable<any>{
-    return  this._httpClient.delete<any>(`${this.url}/${id}`);
+    return  this._httpClient.delete<any>(`${this.url}?id=${id}`)
   }
 
 }

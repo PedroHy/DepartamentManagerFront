@@ -10,19 +10,19 @@ import { provideNgxMask } from 'ngx-mask'
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes), 
+    provideRouter(routes),
     provideHttpClient(),
     importProvidersFrom([
       provideFirebaseApp(() => initializeApp({
-        apiKey: "apiKey",
-        authDomain: "authDomain",
-        projectId: "projectId",
-        storageBucket: "storageBucket",
-        messagingSenderId: "messagingSenderId",
-        appId: "appId"
+        apiKey: "AIzaSyCSwxFHqaU0VjVsqXM4pGk2Eljg4VSvpPI",
+        authDomain: "departamentmanager-226c8.firebaseapp.com",
+        projectId: "departamentmanager-226c8",
+        storageBucket: "departamentmanager-226c8.appspot.com",
+        messagingSenderId: "1094607551295",
+        appId: "1:1094607551295:web:42a6dc41366a67ffac318a"
       }
       )),
-      provideStorage(()=> getStorage())
+      provideStorage(() => getStorage())
     ]),
     provideNgxMask()
   ]
